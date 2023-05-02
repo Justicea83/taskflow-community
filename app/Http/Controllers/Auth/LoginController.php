@@ -97,7 +97,7 @@ class LoginController extends Controller
 
             if (!\App\Models\User::query()->where('username', $coreUser->user_name)->exists()) {
                 $communityUser = new \App\Models\User();
-                $communityUser->email = $coreUser->employee->emp_work_email;
+                $communityUser->email = $coreUser->employee->emp_work_email ?? $coreUser->user_name;
                 $communityUser->username = $coreUser->user_name;
                 $communityUser->type = $this->getUserRole($coreUser->user_name, $coreUser->employee->emp_work_email);
                 $communityUser->password = bcrypt($request->get('password'));
