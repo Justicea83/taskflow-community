@@ -13,6 +13,7 @@ final class Tag extends Model
     use HasFactory;
     use HasSlug;
 
+    protected $fillable = ['name', 'slug'];
     /**
      * {@inheritdoc}
      */
@@ -45,11 +46,11 @@ final class Tag extends Model
 
     public function scopePublic(Builder $query): Builder
     {
-        return $query->where('slug', '!=', 'laravelio');
+        return $query->where('slug', '!=', 'taskflowhr');
     }
 
     public function isAnnouncement(): bool
     {
-        return $this->slug === 'laravelio';
+        return $this->slug === 'taskflowhr';
     }
 }

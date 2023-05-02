@@ -12,14 +12,15 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        if (! App::environment('production')) {
+        $this->call(CorrectTagsSeeder::class);
+        /*if (!App::environment('production')) {
             $this->call(UserSeeder::class);
             $this->call(TagSeeder::class);
             $this->call(ReplySeeder::class);
             $this->call(NotificationSeeder::class);
             $this->call(LikeSeeder::class);
-        }
+        }*/
     }
 }
