@@ -7,11 +7,11 @@
 }
 
 .button-primary {
-    @apply text-white bg-lio-500 !important;
+    @apply text-white bg-blue-600 !important;
 }
 
 .button-primary:hover {
-    @apply bg-lio-600;
+    @apply bg-blue-700;
 }
 
 .button-danger {

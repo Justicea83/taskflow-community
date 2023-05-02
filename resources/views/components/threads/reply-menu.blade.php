@@ -2,7 +2,7 @@
 
 <div class="flex items-center lg:gap-x-3">
     @if ($reply->author()->isModerator() || $reply->author()->isAdmin())
-        <span class="text-sm text-lio-500 border border-lio-200 rounded py-1.5 px-3 leading-none">
+        <span class="text-sm text-blue-600 border border-lio-200 rounded py-1.5 px-3 leading-none">
             moderator
         </span>
     @endif
@@ -10,7 +10,7 @@
     @can(App\Policies\ThreadPolicy::UPDATE, $thread)
         @if ($thread->isSolutionReply($reply))
             <button
-                class="flex items-center font-medium text-lio-500 hover:text-gray-300"
+                class="flex items-center font-medium text-blue-600 hover:text-gray-300"
                 @click="activeModal = 'unmarkSolution-{{ $thread->id }}'"
             >
                 <x-heroicon-o-check-badge class="w-6 h-6" />
@@ -27,7 +27,7 @@
             </x-modal>
         @else
             <button
-                class="flex items-center font-medium text-gray-300 hover:text-lio-500"
+                class="flex items-center font-medium text-gray-300 hover:text-blue-600"
                 @click="activeModal = 'markSolution-{{ $reply->id }}'"
             >
                 <x-heroicon-o-check-badge class="w-6 h-6" />
@@ -45,7 +45,7 @@
         @endif
     @else
         @if ($thread->isSolutionReply($reply))
-            <span class="flex items-center font-medium text-lio-500">
+            <span class="flex items-center font-medium text-blue-600">
                 <x-heroicon-o-check-badge class="w-6 h-6" />
                 <span>Solution</span>
             </span>

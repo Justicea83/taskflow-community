@@ -43,7 +43,7 @@
 
                 <div class="w-full block gap-x-4 lg:flex lg:items-center lg:justify-end">
                     <div class="flex items-center">
-                        <button @click="showSearch($event)" @keyup.window.slash="showSearch($event)" class="hover:text-lio-500">
+                        <button @click="showSearch($event)" @keyup.window.slash="showSearch($event)" class="hover:text-blue-600">
                             <x-heroicon-o-magnifying-glass class="h-5 w-5 hidden lg:block" />
                         </button>
                         @include('_partials._search')
@@ -67,7 +67,7 @@
                                     </x-buttons.secondary-cta>
                                 </div>
 
-                                <a href="{{ route('login') }}" class="block w-full text-center bg-lio-500 text-white p-2.5 lg:hidden">
+                                <a href="{{ route('login') }}" class="block w-full text-center bg-blue-600 text-white p-2.5 lg:hidden">
                                     Login
                                 </a>
                             </li>
@@ -76,7 +76,7 @@
                                 <div class="flex items-center justify-center">
                                     <a href="{{ route('notifications') }}" class="hidden shrink-0 rounded-full lg:block">
                                         <span class="block relative">
-                                            <x-heroicon-o-bell  class="h-5 w-5 hover:fill-current hover:text-lio-500"/>
+                                            <x-heroicon-o-bell  class="h-5 w-5 hover:fill-current hover:text-blue-600"/>
 
                                             <livewire:notification-indicator/>
                                         </span>

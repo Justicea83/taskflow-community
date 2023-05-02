@@ -1,6 +1,6 @@
 <div>
     <div class="flex items-center">
-        <input name="{{ $name }}" id="{{ $id }}" type="checkbox" value="1" class="h-4 w-4 text-lio-600 focus:ring-lio-500 border-gray-300 rounded">
+        <input name="{{ $name }}" id="{{ $id }}" type="checkbox" value="1" class="h-4 w-4 text-blue-700 focus:ring-blue-600 border-gray-300 rounded">
 
         <label for="{{ $id }}" class="ml-2 block text-sm text-gray-900">
             {{ $slot }}

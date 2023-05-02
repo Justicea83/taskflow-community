@@ -12,7 +12,7 @@
                 <button 
                     type="button" 
                     @click="mode = 'write'" 
-                    :class="{ 'text-lio-500 border-lio-500 border-b-2': mode === 'write' }"
+                    :class="{ 'text-blue-600 border-blue-600 border-b-2': mode === 'write' }"
                 >
                     Write
                 </button>
@@ -23,7 +23,7 @@
                     type="button" 
                     @click="mode = 'preview'" 
                     wire:click="preview" 
-                    :class="{ 'text-lio-500 border-lio-500 border-b-2': mode === 'preview' }"
+                    :class="{ 'text-blue-600 border-blue-600 border-b-2': mode === 'preview' }"
                 >
                     Preview
                 </button>
@@ -66,7 +66,7 @@
                             <li
                                 @click.prevent="selectUser('{{ $user['username'] }}')"
                                 role="option"
-                                class="flex items-center gap-x-2 p-2 cursor-pointer hover:bg-lio-100"
+                                class="flex items-center gap-x-2 p-2 cursor-pointer hover:bg-blue-100"
                                 data-username="{{ $user['username'] }}"
                                 aria-selected="{{ $loop->first ? 'true' : 'false' }}"
                             >

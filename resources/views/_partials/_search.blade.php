@@ -40,7 +40,7 @@
                 </h2>
                 <ul class="mt-2 text-sm text-gray-800">
                     <template x-for="thread in threads.threads">
-                        <li class="cursor-default select-none px-4 py-2 hover:bg-lio-100" :id="`option-${thread.id}`"
+                        <li class="cursor-default select-none px-4 py-2 hover:bg-blue-100" :id="`option-${thread.id}`"
                             role="option" tabindex="-1">
                             <a :href="'/forum/'+thread.slug" class="flex flex-col">
                                 <span class="text-black-900 font-medium break-all"
@@ -57,7 +57,7 @@
                 </h2>
                 <ul class="mt-2 text-sm text-gray-800">
                     <template x-for="article in articles.articles">
-                        <li class="cursor-default select-none px-4 py-2 hover:bg-lio-100" :id="`option-${article.id}`"
+                        <li class="cursor-default select-none px-4 py-2 hover:bg-blue-100" :id="`option-${article.id}`"
                             role="option" tabindex="-1">
                             <a :href="'/articles/'+article.slug" class="flex flex-col">
                                 <span class="text-black-900 font-medium break-all"

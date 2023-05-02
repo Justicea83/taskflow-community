@@ -21,7 +21,7 @@
 }
 
 a > span > em {
-    @apply bg-lio-100;
+    @apply bg-blue-100;
 }
 
 .search {
@@ -48,7 +48,7 @@ svg .primary {
 }
 
 svg .secondary {
-    @apply text-lio-500 fill-current;
+    @apply text-blue-600 fill-current;
 }
 
 [x-cloak] {
@@ -60,15 +60,15 @@ svg .secondary {
 }
 
 .nav a:hover {
-    @apply text-gray-700 border-lio-500;
+    @apply text-gray-700 border-blue-600;
 }
 
 .nav a.active {
-    @apply border-lio-500 text-gray-900;
+    @apply border-blue-600 text-gray-900;
 }
 
 .nav a.active:focus {
-    @apply border-lio-600;
+    @apply border-blue-700;
 }
 
 .nav .dropdown a {
@@ -128,7 +128,7 @@ svg .secondary {
 }
 
 .choices__item.choices__item--selectable {
-    @apply bg-lio-500 border-lio-500 text-white !important;
+    @apply bg-blue-600 border-blue-600 text-white !important;
 }
 
 .choices__list--single > .choices__item.choices__item--selectable {
@@ -136,7 +136,7 @@ svg .secondary {
 }
 
 .choices__item.is-highlighted {
-    @apply bg-lio-600 border-lio-600 text-white !important;
+    @apply bg-blue-700 border-blue-700 text-white !important;
 }
 
 .choices[data-type*='select-one']:after {
@@ -148,5 +148,5 @@ svg .secondary {
 }
 
 .editor li[aria-selected='true'] {
-    @apply bg-lio-100;
+    @apply bg-blue-100;
 }

@@ -65,7 +65,7 @@
                             <span class="mt-2 text-sm text-gray-500">
                                 This email address is not verified yet.
 
-                                <a href="{{ route('verification.notice') }}" class="text-lio-500">
+                                <a href="{{ route('verification.notice') }}" class="text-blue-600">
                                     Resend verification email.
                                 </a>
                             </span>

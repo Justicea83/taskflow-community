@@ -48,13 +48,13 @@
             @foreach ($tags as $tag)
                 <a 
                     href="{{ route($route, ['tag' => $tag->slug(), 'filter' => $filter]) }}{{ $jumpTo ? '#'.$jumpTo : '' }}" 
-                    class="flex items-center py-3.5 hover:text-lio-500"
-                    :class="{ 'text-lio-500': '{{ $tag->id() }}' === activeTag }"  
+                    class="flex items-center py-3.5 hover:text-blue-600"
+                    :class="{ 'text-blue-600': '{{ $tag->id() }}' === activeTag }"  
                     x-show="isFiltered('{{ $tag->name() }}')"
                 >
                     {{ $tag->name() }}
                     <x-heroicon-o-check-circle 
-                        class="ml-3 w-6 h-6 text-lio-500" 
+                        class="ml-3 w-6 h-6 text-blue-600" 
                         x-cloak 
                         x-show="'{{ $tag->id() }}' === activeTag" 
                     />

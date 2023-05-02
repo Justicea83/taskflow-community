@@ -64,7 +64,7 @@
             Last updated
 
             @if ($updatedBy = $thread->updatedBy())
-                by <a href="{{ route('profile', $updatedBy->username()) }}" class="text-lio-500 border-b-2 pb-0.5 border-lio-100 hover:text-lio-600">
+                by <a href="{{ route('profile', $updatedBy->username()) }}" class="text-blue-600 border-b-2 pb-0.5 border-blue-100 hover:text-blue-700">
                     {{ '@'.$thread->updatedBy()->username() }}
                 </a>
             @endif

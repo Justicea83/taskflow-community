@@ -4,7 +4,7 @@
             <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-4xl sm:truncate">
                 Notifications
 
-                <span class="text-2xl text-lio-500 rounded-full bg-lio-100 px-3">
+                <span class="text-2xl text-blue-600 rounded-full bg-blue-100 px-3">
                     {{ $notificationCount }}
                 </span>
             </h2>

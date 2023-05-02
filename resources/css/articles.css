@@ -65,7 +65,7 @@
 }
 
 .article blockquote {
-    @apply border-l-4 border-lio-500 pl-4 ml-4;
+    @apply border-l-4 border-blue-600 pl-4 ml-4;
 }
 
 .article a {

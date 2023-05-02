@@ -41,7 +41,7 @@
 
                 <a
                     href="#{{ $reply->id() }}"
-                    class="pl-8 sm:pl-0 text-gray-700 hover:text-lio-500 hover:underline"
+                    class="pl-8 sm:pl-0 text-gray-700 hover:text-blue-600 hover:underline"
                 >
                     {{ ($reply->trashed() ? $reply->deletedAt() : $reply->createdAt())->diffForHumans() }}
                 </a>
@@ -62,11 +62,11 @@
             </div>
 
             @if ($thread->isSolutionReply($reply) && $resolvedBy = $thread->resolvedBy())
-                <div class="px-6 pb-6 text-lio-500">
+                <div class="px-6 pb-6 text-blue-600">
                     Solution selected by
                     <a
                         href="{{ route('profile', $resolvedBy->username()) }}"
-                        class="font-bold text-lio-600 hover:text-lio-800"
+                        class="font-bold text-blue-700 hover:text-lio-800"
                     >
                         {{ '@'.$resolvedBy->username() }}
                     </a>
