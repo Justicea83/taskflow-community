@@ -5,6 +5,7 @@
 /public/js
 /public/mix-manifest.json
 /public/storage
+/docker/logs/nginx/laravel_access.log
 /public/sitemap.xml
 /public/.htaccess
 /storage/*.key
