@@ -13,6 +13,16 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @property int|mixed $type
+ * @property mixed|string $password
+ * @property mixed|string $name
+ * @property mixed $email
+ * @property mixed $username
+ * @property \Illuminate\Support\Carbon|mixed $email_verified_at
+ * @property mixed|string $remember_token
+ * @property mixed|string $bio
+ */
 final class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;

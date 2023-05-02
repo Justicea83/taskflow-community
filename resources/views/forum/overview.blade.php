@@ -111,9 +111,9 @@
             </div>
 
             <div class="lg:w-1/4">
-                <div class="hidden lg:block">
+                {{--<div class="hidden lg:block">
                     @include('layouts._ads._forum_sidebar')
-                </div>
+                </div>--}}
 
                 <div class="bg-white shadow rounded-md mt-6">
                     <h3 class="text-xl font-semibold px-5 pt-5">
@@ -141,7 +141,7 @@
                                     </div>
 
                                     <div>
-                                        <span class="flex items-center gap-x-3 text-lio-500">
+                                        <span class="flex items-center gap-x-3 text-blue-600">
                                             <span class="text-xl font-medium">
                                                 {{ $loop->iteration }}
                                             </span>

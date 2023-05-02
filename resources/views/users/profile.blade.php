@@ -22,7 +22,7 @@
                             <h1 class="text-4xl font-bold">{{ $user->name() }}</h1>
 
                             @if ($user->isAdmin() || $user->isModerator())
-                                <span class="border border-lio-500 text-lio-500 rounded px-3 py-1">
+                                <span class="border border-blue-600 text-blue-600 rounded px-3 py-1">
                                     {{ $user->isAdmin() ? 'Admin' : 'Moderator' }}
                                 </span>
                             @endif
@@ -126,28 +126,28 @@
                     <div class="mt-4 grid grid-cols-1 lg:grid-cols-2">
                         <div class="w-full flex justify-between px-5 py-2.5 bg-gray-100">
                             <span>Threads</span>
-                            <span class="text-lio-500">
+                            <span class="text-blue-600">
                                 {{ number_format($user->countThreads()) }}
                             </span>
                         </div>
 
                         <div class="w-full flex justify-between px-5 py-2.5 bg-white lg:bg-gray-100">
                             <span>Replies</span>
-                            <span class="text-lio-500">
+                            <span class="text-blue-600">
                                 {{ number_format($user->countReplies()) }}
                             </span>
                         </div>
 
                         <div class="w-full flex justify-between px-5 py-2.5 bg-gray-100 lg:bg-white">
                             <span>Solutions</span>
-                            <span class="text-lio-500">
+                            <span class="text-blue-600">
                                 {{ number_format($user->countSolutions()) }}
                             </span>
                         </div>
 
                         <div class="w-full flex justify-between px-5 py-2.5">
                             <span>Articles</span>
-                            <span class="text-lio-500">
+                            <span class="text-blue-600">
                                 {{ number_format($user->countArticles()) }}
                             </span>
                         </div>
@@ -175,10 +175,10 @@
         <div class="mt-16 lg:mt-32" x-data="{ tab: 'threads' }">
             <div class="container mx-auto">
                 <nav class="flex items-center justify-between lg:justify-start">
-                    <button @click="tab = 'threads'" :class="{ 'text-lio-500 border-lio-500 border-b-2': tab === 'threads' }"  class="px-4 whitespace-nowrap py-5 font-medium text-lg text-gray-900 hover:text-lio-500 hover:border-lio-500 focus:outline-none focus:text-lio-500 focus:border-lio-500 lg:w-1/3">
+                    <button @click="tab = 'threads'" :class="{ 'text-blue-600 border-blue-600 border-b-2': tab === 'threads' }"  class="px-4 whitespace-nowrap py-5 font-medium text-lg text-gray-900 hover:text-blue-600 hover:border-blue-600 focus:outline-none focus:text-blue-600 focus:border-blue-600 lg:w-1/3">
                         Threads posted
                     </button>
-                    <button @click="tab = 'replies'" :class="{ 'text-lio-500 border-lio-500 border-b-2': tab === 'replies' }"  class="px-4 whitespace-nowrap py-5 font-medium text-lg text-gray-900 hover:text-lio-500 hover:border-lio-500 focus:outline-none focus:text-lio-500 focus:border-lio-500 lg:w-1/3">
+                    <button @click="tab = 'replies'" :class="{ 'text-blue-600 border-blue-600 border-b-2': tab === 'replies' }"  class="px-4 whitespace-nowrap py-5 font-medium text-lg text-gray-900 hover:text-blue-600 hover:border-blue-600 focus:outline-none focus:text-blue-600 focus:border-blue-600 lg:w-1/3">
                         Replies posted
                     </button>
                 </nav>

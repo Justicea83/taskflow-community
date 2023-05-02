@@ -11,10 +11,10 @@
     <title>
         {{ isset($title) ? $title.' | ' : '' }}
         {{ config('app.name') }}
-        {{ is_active('home') ? '- The Laravel Community Portal' : '' }}
+        {{ is_active('home') ? '- The TaskflowHR Community Portal' : '' }}
     </title>
 
-    <meta name="description" content="The Laravel portal for problem solving, knowledge sharing and community building." />
+    <meta name="description" content="The TaskflowHR portal for problem solving, knowledge sharing and community building." />
     <link rel="canonical" href="{{ $canonical ?? Request::url() }}" />
 
     @vite(['resources/css/app.css'])
@@ -35,7 +35,7 @@
 
 <body class="{{ $bodyClass ?? '' }} font-sans bg-white antialiased" :class="{ 'overflow-hidden': lockScroll }" x-data="{ lockScroll: false, activeModal: false }" @keyup.escape="activeModal = false">
 
-@include('layouts._ads._banner')
+{{--@include('layouts._ads._banner')--}}
 @include('layouts._nav')
 
 @yield('body')

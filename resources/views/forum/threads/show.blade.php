@@ -37,7 +37,7 @@
                     @endforeach
                 </div>
 
-                <div class="absolute h-full border-l border-lio-500 ml-8 z-10 inset-y-0 left-0 lg:ml-16"></div>
+                <div class="absolute h-full border-l border-blue-600 ml-8 z-10 inset-y-0 left-0 lg:ml-16"></div>
             </div>
 
             @if ($thread->isLocked())
@@ -48,7 +48,7 @@
                         This thread was locked by
 
                         <a
-                            class="text-lio-500 hover:text-lio-600"
+                            class="text-blue-500 hover:text-blue-600"
                             href="{{ route('profile', $lockedBy->username()) }}"
                         >{{ $lockedBy->name() }}</a>.
                     </p>
@@ -91,7 +91,7 @@
 
                                 <div class="flex justify-between items-start mt-4 gap-x-8 lg:items-center">
                                     <p>
-                                        Please make sure you've read our <a href="{{ route('rules') }}" class="text-lio-500 border-b-2 pb-0.5 border-lio-100 hover:text-lio-600">rules</a> before replying to this thread.
+                                        Please make sure you've read our <a href="{{ route('rules') }}" class="text-blue-600 border-b-2 pb-0.5 border-blue-100 hover:text-blue-700">rules</a> before replying to this thread.
                                     </p>
                                 </div>
                             </form>
@@ -101,7 +101,7 @@
             @else
                 @guest
                     <p class="text-center py-8">
-                        <a href="{{ route('login') }}" class="text-lio-500 border-b-2 pb-0.5 border-lio-100 hover:text-lio-600">Sign in</a> to participate in this thread!
+                        <a href="{{ route('login') }}" class="text-blue-600 border-b-2 pb-0.5 border-blue-100 hover:text-blue-700">Sign in</a> to participate in this thread!
                     </p>
                 @else
                     <x-info-panel>
@@ -119,7 +119,7 @@
         </div>
 
         <div class="w-full lg:w-1/4">
-            @include('layouts._ads._forum_sidebar')
+            {{--@include('layouts._ads._forum_sidebar')--}}
 
             <div class="mt-6">
                 <x-users.profile-block :user="$thread->author()" />

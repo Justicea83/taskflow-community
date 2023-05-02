@@ -1,7 +1,7 @@
 <!-- Twitter sharing -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ isset($title) ? $title.' | ' : '' }}{{ config('app.name') }}">
-<meta name="twitter:creator" content="@laravelio" />
+<meta name="twitter:creator" content="@justicea83" />
 <!-- /Twitter sharing -->
 
 <!-- Facebook sharing -->

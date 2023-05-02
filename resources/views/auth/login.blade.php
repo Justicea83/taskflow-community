@@ -22,7 +22,7 @@
             </x-forms.inputs.checkbox>
 
             <div class="text-sm">
-                <a href="{{ route('password.forgot') }}" class="font-medium text-lio-600 hover:text-lio-500">
+                <a href="{{ route('password.forgot') }}" class="font-medium text-blue-700 hover:text-blue-500">
                     Forgot your password?
                 </a>
             </div>
@@ -35,7 +35,7 @@
         </div>
     </x-buk-form>
 
-    <div class="mt-6">
+   {{-- <div class="mt-6">
         <div class="relative">
             <div class="absolute inset-0 flex items-center">
                 <div class="w-full border-t border-gray-300"></div>
@@ -58,5 +58,5 @@
                 </x-buttons.secondary-button>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection

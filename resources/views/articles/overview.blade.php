@@ -10,12 +10,12 @@
         </div>
     </div>
 
-    <div class="bg-lio-100">
+    <div class="bg-blue-100">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
                 <span class="block">Got some knowledge to share?</span>
                 <span class="block">
-                    Share your article with <a href="https://twitter.com/laravelio" class="text-lio-500 hover:text-lio-600 hover:underline">our 45,000 Twitter followers</a>.
+                    Share your article with <a href="https://twitter.com/laravelio" class="text-blue-600 hover:text-blue-700 hover:underline">our 45,000 Twitter followers</a>.
                 </span>
             </h2>
             <div class="mt-8 flex lg:mt-0 lg:shrink-0">
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="pt-2 lg:hidden">
-                    @include('layouts._ads._forum_sidebar')
+                    {{--@include('layouts._ads._forum_sidebar')--}}
 
                     <div class="flex gap-x-4 mt-10">
                         <div class="w-1/2">
@@ -136,9 +136,9 @@
             </div>
 
             <div class="lg:w-1/4">
-                <div class="hidden lg:block">
+                {{--<div class="hidden lg:block">
                     @include('layouts._ads._forum_sidebar')
-                </div>
+                </div>--}}
 
                 <div class="bg-white shadow rounded-md mt-6">
                     <h3 class="text-xl font-semibold px-5 pt-5">
@@ -166,7 +166,7 @@
                                     </div>
 
                                     <div>
-                                        <span class="flex items-center gap-x-3 text-lio-500">
+                                        <span class="flex items-center gap-x-3 text-blue-600">
                                             <span class="text-xl font-medium">
                                                 {{ $loop->iteration }}
                                             </span>

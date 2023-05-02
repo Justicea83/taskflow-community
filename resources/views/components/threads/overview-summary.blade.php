@@ -70,7 +70,7 @@
         @if ($thread->isSolved())
             <a
                 href="{{ route('thread', $thread->slug()) }}#{{ $thread->solution_reply_id }}"
-                class="flex items-center gap-x-2 font-medium text-lio-500"
+                class="flex items-center gap-x-2 font-medium text-blue-600"
             >
                 <x-heroicon-o-check-badge class="w-6 h-6" />
                 <span class="hover:underline">Solved</span>

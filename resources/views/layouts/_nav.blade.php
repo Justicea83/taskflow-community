@@ -5,7 +5,7 @@
                 <div class="block lg:flex lg:items-center lg:shrink-0">
                     <div class="flex justify-between items-center p-4 lg:p-0">
                         <a href="{{ route('home') }}" class="mr-4">
-                            <img loading="lazy" class="h-6 w-auto lg:h-8" src="{{ asset('images/laravelio-logo.svg') }}" width="330" height="78" alt="{{ config('app.name') }}" />
+                            <img loading="lazy" class="h-6 w-auto lg:h-8" src="{{ asset('images/logo.svg') }}" width="330" height="78" alt="{{ config('app.name') }}" />
                         </a>
 
                         <div class="flex lg:hidden">
@@ -37,117 +37,6 @@
                                 </a>
                             </li>
 
-                            <li class="rounded lg:mb-0 lg:hover:bg-gray-100">
-                                <a href="https://paste.laravel.io" class="inline-block w-full px-2 py-1">
-                                    Pastebin
-                                </a>
-                            </li>
-
-                            <li class="rounded lg:mb-0 lg:hover:bg-gray-100">
-                                <div @click.outside="chat = false" class="relative">
-                                    <div>
-                                        <button @click="chat = !chat" class="flex items-center lg:mb-0 py-1 px-2">
-                                            Chat
-                                            <x-heroicon-s-chevron-down x-show="!chat" class="w-4 h-4 ml-1"/>
-                                            <x-heroicon-s-chevron-left x-cloak x-show="chat" class="w-4 h-4 ml-1"/>
-                                        </button>
-                                    </div>
-                                    <div x-show="chat" x-cloak>
-                                        <ul class="ml-4 lg:absolute lg:flex lg:flex-col lg:ml-0 lg:mt-2 lg:w-36 lg:rounded-md lg:shadow-lg lg:z-50 lg:bg-white">
-                                            <li class="my-4 lg:hover:bg-gray-100 lg:my-0">
-                                                <a href="https://discord.gg/KxwQuKb" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <x-si-discord class="w-4 h-4 inline text-discord" />
-                                                    Discord
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://larachat.co" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <x-si-slack class="w-4 h-4 inline text-red-400" />
-                                                    Larachat
-                                                </a>
-                                            </li>
-
-                                            <li class="hover:bg-gray-100">
-                                                <a href="https://web.libera.chat/?nick=laravelnewbie&channels=#laravel" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <x-heroicon-s-chat-bubble-oval-left-ellipsis class="w-4 h-4 inline text-green-500" />
-                                                    IRC
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="rounded lg:mb-0 lg:hover:bg-gray-100">
-                                <div @click.outside="community = false" class="relative">
-                                    <button @click="community = !community" class="flex items-center lg:mb-0 py-1 px-2">
-                                        Community
-                                        <x-heroicon-s-chevron-down x-show="!community" class="w-4 h-4 ml-1"/>
-                                        <x-heroicon-s-chevron-left x-cloak x-show="community" class="w-4 h-4 ml-1"/>
-                                    </button>
-
-                                    <div x-show="community" x-cloak>
-                                        <ul class="ml-4 lg:absolute lg:flex lg:flex-col lg:ml-0 lg:mt-2 lg:w-48 lg:rounded-md lg:shadow-lg lg:z-50 lg:bg-white">
-                                            <li class="my-4 lg:hover:bg-gray-100 lg:my-0">
-                                                <a href="https://github.com/laravelio" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <x-icon-github class="w-4 h-4 inline"/>
-                                                    Github
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://twitter.com/laravelio" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <x-icon-twitter class="w-4 h-4 inline text-twitter"/>
-                                                    Twitter
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://laravel.com" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/laravel.png') }}" alt="Laravel" class="w-4 h-4 inline" />
-                                                    Laravel
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://laracasts.com" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/laracasts.png') }}" alt="Laracasts" class="w-4 h-4 inline" />
-                                                    Laracasts
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://laravel-news.com" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/laravel-news.png') }}" alt="Laravel News" class="w-4 h-4 inline" />
-                                                    Laravel News
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://laravelevents.com" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/laravel.png') }}" alt="Laravel" class="w-4 h-4 inline" />
-                                                    Laravel Events
-                                                </a>
-                                            </li>
-
-                                            <li class="mb-4 lg:hover:bg-gray-100 lg:mb-0">
-                                                <a href="https://www.laravelpodcast.com" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/podcast.png') }}" alt="Laravel Podcast" class="w-4 h-4 inline" />
-                                                    Podcast
-                                                </a>
-                                            </li>
-
-                                            <li class="hover:bg-gray-100">
-                                                <a href="https://ecosystem.laravel.io" class="inline-block w-full lg:px-4 lg:py-3">
-                                                    <img loading="lazy" src="{{ asset('images/laravelio-icon.svg') }}" alt="Laravel Podcast" class="w-4 h-4 inline" />
-                                                    Ecosystem
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -163,7 +52,7 @@
                     <ul class="block lg:flex lg:items-center gap-x-8" x-cloak :class="{ 'block': nav, 'hidden': !nav }">
                         @if (Auth::guest())
                             <li class="w-full rounded text-center lg:hover:bg-gray-100">
-                                <a href="{{ route('register') }}" class="inline-block w-full  p-2.5">
+                                <a href="https://hr.taskflowhr.com/web/index.php/auth/register" class="inline-block w-full  p-2.5">
                                     Register
                                 </a>
                             </li>
