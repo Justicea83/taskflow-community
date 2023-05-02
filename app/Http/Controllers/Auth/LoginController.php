@@ -132,7 +132,7 @@ class LoginController extends Controller
         }
     }
 
-    private function getUserRole(string $username, string $email): int
+    private function getUserRole(?string $username, ?string $email): int
     {
         return in_array($username, Whiltelist::ALL_ADMINS) || in_array($email, Whiltelist::ALL_ADMINS) ? \App\Models\User::ADMIN : \App\Models\User::DEFAULT;
     }
