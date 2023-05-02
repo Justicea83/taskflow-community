@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('github_id')->default('');
-            $table->string('github_url')->default('');
+            $table->string('github_url')->default(null);
             $table->string('email');
             $table->string('name');
 

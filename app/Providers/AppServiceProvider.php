@@ -11,9 +11,11 @@ use Illuminate\Database\Connection;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Notifications\AnonymousNotifiable;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Horizon\Horizon;
 
@@ -21,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        if (App::environment('production')) {
+            URL::forceScheme('https');
+        }
         $this->bootEloquentMorphs();
         $this->bootMacros();
         $this->bootHorizon();
