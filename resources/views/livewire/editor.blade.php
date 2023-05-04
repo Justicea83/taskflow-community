@@ -34,7 +34,7 @@
             <div class="flex flex-col relative">
                 <div x-text="body + '\n'" class="invisible whitespace-pre-line border-none p-5 min-h-[5rem]"></div>
                 <textarea 
-                    class="w-full h-full absolute left-0 top-0 right-0 bottom-0 overflow-y-hidden resize-none border-none p-5 focus:border focus:border-lio-300 focus:ring focus:ring-lio-200 focus:ring-opacity-50"
+                    class="w-full h-full absolute left-0 top-0 right-0 bottom-0 overflow-y-hidden resize-none border-none p-5 focus:border focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                     id="body"
                     name="body"
                     placeholder="{{ $placeholder }}"
@@ -103,7 +103,7 @@
         </div>
 
         <div x-show="mode === 'preview'" x-cloak>
-            <div class="prose prose-lio max-w-none p-5 break-words" id="editor-preview">
+            <div class="prose prose-blue max-w-none p-5 break-words" id="editor-preview">
                 {!! $this->preview !!}
             </div>
         </div>
