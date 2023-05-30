@@ -77,7 +77,7 @@
 
     <!-- Search -->
     <section class="mt-12 lg:mt-24">
-        <div class="bg-blue-600 text-white -skew-y-1">
+        <div class="bg-[#5B45E5] text-white -skew-y-1">
             <div class="container mx-auto skew-y-1">
                 <div class="flex flex-col items-center py-10 text-center lg:py-20">
                     <div class="w-full px-4 lg:w-1/2 lg:px-0">

@@ -67,7 +67,7 @@
                                     </x-buttons.secondary-cta>
                                 </div>
 
-                                <a href="{{ route('login') }}" class="block w-full text-center bg-blue-600 text-white p-2.5 lg:hidden">
+                                <a href="{{ route('login') }}" class="block w-full text-center bg-[#5B45E5] text-white p-2.5 lg:hidden">
                                     Login
                                 </a>
                             </li>

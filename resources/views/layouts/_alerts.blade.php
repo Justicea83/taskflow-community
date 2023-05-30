@@ -16,7 +16,7 @@
 @endif
 
 @if (session()->has('success'))
-    <div class="w-full text-white bg-blue-600 p-4" x-data="{}">
+    <div class="w-full text-white bg-[#5B45E5] p-4" x-data="{}">
         <div class="flex items-center flex-wrap justify-between container mx-auto px-4">
             {!! session()->pull('success') !!}
 

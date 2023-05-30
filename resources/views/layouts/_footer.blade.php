@@ -2,12 +2,12 @@
     @include('layouts._sponsors')
 </section>--}}
 
-<div class="bg-gray-900 text-white mt-14 lg:mt-40">
+<div class="bg-[#08003D] text-white mt-14 lg:mt-40">
     <div class="container mx-auto pt-7 pb-8 lg:pt-20 lg:px-16">
         <div class="mx-4 md:mx-0">
             <div class="flex flex-col pb-8 mb-8 border-b lg:pb-16 border-gray-800 lg:flex-row">
                 <div class="w-full mb-6 lg:w-2/5 lg:pr-20 lg:mb-0">
-                    <img loading="lazy" src="{{ asset('images/logo-white.svg') }}" alt="{{ config('app.name') }}" height="50px" class="block mb-5" />
+                    <img loading="lazy" src="{{ asset('images/footer.png') }}" alt="{{ config('app.name') }}" height="50px" class="block mb-5" />
 
                     <p class="text-gray-100 lg:leading-loose">
                         The TaskflowHR portal for problem solving, knowledge sharing and community building.
