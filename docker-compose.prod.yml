@@ -1,0 +1,20 @@
+services:
+  crossjobs-community:
+    build:
+      context: .
+      dockerfile: deploy.Dockerfile
+    image: ghcr.io/justicea83/crossjobs-community:latest
+    expose:
+      - "9000"
+
+  crossjobs-community-nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+      args:
+        PHP_UPSTREAM_CONTAINER: crossjobs-community
+    image: ghcr.io/justicea83/crossjobs-community-nginx:latest
+    depends_on:
+      - crossjobs-community
+    ports:
+      - "${NGINX_HOST_HTTP_PORT}:80"

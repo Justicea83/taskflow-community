@@ -1,0 +1,14 @@
+services:
+  crossjobs-community:
+    container_name: crossjobs-community
+    image: ghcr.io/justicea83/crossjobs-community:latest
+    expose:
+      - "9000"
+
+  crossjobs-community-nginx:
+    container_name:  crossjobs-community-nginx
+    image: ghcr.io/justicea83/crossjobs-community-nginx:latest
+    depends_on:
+      - crossjobs-community
+    ports:
+      - "6204:80"
