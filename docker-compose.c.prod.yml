@@ -4,6 +4,8 @@ services:
     image: ghcr.io/justicea83/crossjobs-community:latest
     expose:
       - "9000"
+    volumes:
+      - ./community/storage:/var/www/html/storage
 
   crossjobs-community-nginx:
     container_name:  crossjobs-community-nginx
