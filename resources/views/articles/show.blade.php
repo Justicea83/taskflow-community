@@ -13,7 +13,7 @@
                 </x-info-banner>
             @elseif ($article->isPublished() && $article->isAuthoredBy(Auth::user()))
                 <x-info-banner>
-                    Your article is now published and cannot be edited anymore. If you want to perform any changes to the article, please email <a href="mailto:support@taskflowhr.com">support@taskflowhr.com</a>
+                    Your article is now published and cannot be edited anymore. If you want to perform any changes to the article, please email <a href="mailto:support@crossjobs.co">support@crossjobs.co</a>
                 </x-info-banner>
             @endif
         @endauth
