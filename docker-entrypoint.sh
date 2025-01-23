@@ -55,9 +55,6 @@ elif [ -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini ]; then
   rm -rf /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 fi
 
-chown -R www-data:www-data /var/www/storage
-chmod -R 775 /var/www/storage
-
 php artisan migrate --seed
 
 exec "$@"

@@ -135,9 +135,9 @@ RUN usermod -u 1000 www-data
 
 WORKDIR /var/www
 
-COPY ./docker-entrypoint.sh /usr/local/bin/
+COPY --chown=www-data:www-data ./docker-entrypoint.sh /usr/local/bin/
 
-COPY . .
+COPY --chown=www-data:www-data . .
 
 #####################################
 # Change FPM listen port to 9001
