@@ -10,6 +10,7 @@
 /public/.htaccess
 /storage/*.key
 /vendor
+/.idea
 /.vscode
 .env
 .phpunit.result.cache
