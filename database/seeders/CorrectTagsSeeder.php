@@ -70,6 +70,8 @@ class CorrectTagsSeeder extends Seeder
         ['name' => 'Appraisal', 'slug' => 'appraisal'],
         ['name' => 'Anniversary', 'slug' => 'anniversary'],
         ['name' => 'CrossJobs', 'slug' => 'taskflowhr'],
+        ['name' => 'Recruitment', 'slug' => 'recruitment'],
+        ['name' => 'AI', 'slug' => 'ai'],
     ];
 
     public function run()
