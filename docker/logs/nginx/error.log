@@ -12,3 +12,4 @@
 2023/04/28 00:00:00 [notice] 41#41: signal process started
 2023/04/28 00:00:00 [notice] 39#39: signal process started
 2023/04/28 00:00:00 [notice] 40#40: signal process started
+2025/01/22 23:04:59 [emerg] 12#12: host not found in upstream "php-fpm:9000" in /etc/nginx/conf.d/upstream.conf:1

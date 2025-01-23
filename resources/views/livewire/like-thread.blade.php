@@ -8,7 +8,7 @@
             </span>
         </div>
     @else 
-        <button type="button" wire:click="toggleLike" class="flex items-center gap-x-2 text-blue-600">
+        <button type="button" wire:click="toggleLike" class="flex items-center gap-x-2 text-purple-600">
             <x-heroicon-o-hand-thumb-up class="w-6 h-6" />
             
             <span class="font-medium">

@@ -1,3 +1,3 @@
 <p class="mt-1 text-sm text-gray-600">
-    Make sure you've read our <a href="{{ route('rules') }}" class="text-blue-700 underline">rules</a> before proceeding.
+    Make sure you've read our <a href="{{ route('rules') }}" class="text-purple-700 underline">rules</a> before proceeding.
 </p>

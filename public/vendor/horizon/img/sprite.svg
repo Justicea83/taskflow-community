@@ -95,7 +95,7 @@
     <symbol viewBox="0 0 20 20" id="zondicon-block">
         <path d="M0 10a10 10 0 1 1 20 0 10 10 0 0 1-20 0zm16.32-4.9L5.09 16.31A8 8 0 0 0 16.32 5.09zm-1.41-1.42A8 8 0 0 0 3.68 14.91L14.91 3.68z"/>
     </symbol>
-    <symbol viewBox="0 0 20 20" id="zondicon-bluetooth">
+    <symbol viewBox="0 0 20 20" id="zondicon-purpletooth">
         <path d="M9.41 0l6 6-4 4 4 4-6 6H9v-7.59l-3.3 3.3-1.4-1.42L8.58 10l-4.3-4.3L5.7 4.3 9 7.58V0h.41zM11 4.41V7.6L12.59 6 11 4.41zM12.59 14L11 12.41v3.18L12.59 14z"/>
     </symbol>
     <symbol viewBox="0 0 20 20" id="zondicon-bolt">

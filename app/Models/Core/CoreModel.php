@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class CoreModel extends Model
 {
-    protected $connection = 'core';
+    protected $connection = 'pgsql';
 }

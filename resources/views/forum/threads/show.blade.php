@@ -37,7 +37,7 @@
                     @endforeach
                 </div>
 
-                <div class="absolute h-full border-l border-blue-600 ml-8 z-10 inset-y-0 left-0 lg:ml-16"></div>
+                <div class="absolute h-full border-l border-purple-600 ml-8 z-10 inset-y-0 left-0 lg:ml-16"></div>
             </div>
 
             @if ($thread->isLocked())
@@ -48,7 +48,7 @@
                         This thread was locked by
 
                         <a
-                            class="text-blue-500 hover:text-blue-600"
+                            class="text-purple-500 hover:text-purple-600"
                             href="{{ route('profile', $lockedBy->username()) }}"
                         >{{ $lockedBy->name() }}</a>.
                     </p>
@@ -91,7 +91,7 @@
 
                                 <div class="flex justify-between items-start mt-4 gap-x-8 lg:items-center">
                                     <p>
-                                        Please make sure you've read our <a href="{{ route('rules') }}" class="text-blue-600 border-b-2 pb-0.5 border-blue-100 hover:text-blue-700">rules</a> before replying to this thread.
+                                        Please make sure you've read our <a href="{{ route('rules') }}" class="text-purple-600 border-b-2 pb-0.5 border-purple-100 hover:text-purple-700">rules</a> before replying to this thread.
                                     </p>
                                 </div>
                             </form>
@@ -101,7 +101,7 @@
             @else
                 @guest
                     <p class="text-center py-8">
-                        <a href="{{ route('login') }}" class="text-blue-600 border-b-2 pb-0.5 border-blue-100 hover:text-blue-700">Sign in</a> to participate in this thread!
+                        <a href="{{ route('login') }}" class="text-purple-600 border-b-2 pb-0.5 border-purple-100 hover:text-purple-700">Sign in</a> to participate in this thread!
                     </p>
                 @else
                     <x-info-panel>

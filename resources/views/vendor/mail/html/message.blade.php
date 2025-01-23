@@ -3,7 +3,7 @@
     @slot('header')
         @component('mail::header', ['url' => config('app.url')])
             <div class="logo">
-                <img src="{{ asset('images/laravelio.png') }}" alt="TaskflowHR" />
+                <img src="{{ asset('images/laravelio.png') }}" alt="CrossJobs" />
             </div>
         @endcomponent
     @endslot

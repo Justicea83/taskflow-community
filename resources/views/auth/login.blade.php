@@ -22,7 +22,7 @@
             </x-forms.inputs.checkbox>
 
             <div class="text-sm">
-                <a href="{{ route('password.forgot') }}" class="font-medium text-blue-700 hover:text-blue-500">
+                <a href="{{ route('password.forgot') }}" class="font-medium text-purple-700 hover:text-purple-500">
                     Forgot your password?
                 </a>
             </div>

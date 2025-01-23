@@ -9,10 +9,7 @@ use App\Models\Core\User;
 use App\Providers\RouteServiceProvider;
 use App\Utils\Whiltelist;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -91,25 +88,25 @@ class LoginController extends Controller
         }
 
         /** @var User $coreUser */
-        $coreUser = User::query()->with('employee')->where('user_name', $request->get('username'))->first();
+        $coreUser = User::query()->where('email', $request->get('username'))->first();
 
-        if ($coreUser && Hash::check($request->get('password'), $coreUser->user_password)) {
-
-            if (!\App\Models\User::query()->where('username', $coreUser->user_name)->exists()) {
+        if ($coreUser && checkDjangoPassword($request->get('password'), $coreUser->password)) {
+            if (!\App\Models\User::query()->where('username', $coreUser->email)->exists()) {
                 $communityUser = new \App\Models\User();
-                $communityUser->email = $coreUser->employee->emp_work_email ?? $coreUser->user_name;
-                $communityUser->username = $coreUser->user_name;
-                $communityUser->type = $this->getUserRole($coreUser->user_name, $coreUser->employee->emp_work_email);
+                $communityUser->email = $coreUser->email;
+                $communityUser->username = $coreUser->email;
+                $communityUser->type = $this->getUserRole($coreUser->email);
                 $communityUser->password = bcrypt($request->get('password'));
-                $communityUser->name = $this->getName($coreUser->employee);
+                $communityUser->name = $this->getName($coreUser);
                 $communityUser->email_verified_at = now();
                 $communityUser->remember_token = Str::random(10);
                 $communityUser->bio = '';
+                $communityUser->github_username = null;
+                $communityUser->github_id = null;
                 $communityUser->save();
             }
         }
 
-        //dd($request->only('username', 'password'));
         if (Auth::attempt($request->only('username', 'password'), $request->boolean('remember'))) {
             if ($request->hasSession()) {
                 $request->session()->put('auth.password_confirmed_at', time());
@@ -123,17 +120,21 @@ class LoginController extends Controller
         return $this->sendFailedLoginResponse($request);
     }
 
-    private function getName(Employee $employee): string
+    private function getName(User $user): string
     {
-        if (!empty($employee->emp_middle_name)) {
-            return sprintf('%s %s %s', $employee->emp_firstname, $employee->emp_middle_name, $employee->emp_lastname);
-        } else {
-            return sprintf('%s %s', $employee->emp_firstname, $employee->emp_lastname);
-        }
+        return sprintf('%s %s', $user->first_name, $user->last_name);
     }
 
-    private function getUserRole(?string $username, ?string $email): int
+    private function getUserRole(string $email): int
     {
-        return in_array($username, Whiltelist::ALL_ADMINS) || in_array($email, Whiltelist::ALL_ADMINS) ? \App\Models\User::ADMIN : \App\Models\User::DEFAULT;
+        if (str_ends_with($email, '@crossjobs.co')) {
+            return \App\Models\User::ADMIN;
+        }
+
+        if (in_array($email, Whiltelist::ALL_ADMINS)) {
+            return \App\Models\User::ADMIN;
+        }
+
+        return \App\Models\User::DEFAULT;
     }
 }

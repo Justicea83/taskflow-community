@@ -10,10 +10,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('github_id')->nullable()->change();
+            $table->string('github_id')->nullable()->default(null)->change();
         });
         Schema::table('users', function (Blueprint $table) {
-            $table->string('github_username')->nullable()->change();
+            $table->string('github_username')->nullable()->default(null)->change();
         });
 
         if (! app()->runningUnitTests()) {

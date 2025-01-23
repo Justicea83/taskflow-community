@@ -60,7 +60,7 @@
                                             <x-tables.table-data class="text-center w-10">
                                                 <a
                                                     href="{{ route('articles.show', $article->slug()) }}"
-                                                    class="text-blue-700 hover:text-lio-800"
+                                                    class="text-purple-700 hover:text-lio-800"
                                                 >
                                                     <x-heroicon-o-eye class="w-5 h-5 inline" />
                                                 </a>

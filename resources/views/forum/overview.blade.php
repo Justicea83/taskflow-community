@@ -141,7 +141,7 @@
                                     </div>
 
                                     <div>
-                                        <span class="flex items-center gap-x-3 text-blue-600">
+                                        <span class="flex items-center gap-x-3 text-purple-600">
                                             <span class="text-xl font-medium">
                                                 {{ $loop->iteration }}
                                             </span>

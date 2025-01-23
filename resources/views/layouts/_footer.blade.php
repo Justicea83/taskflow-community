@@ -7,17 +7,17 @@
         <div class="mx-4 md:mx-0">
             <div class="flex flex-col pb-8 mb-8 border-b lg:pb-16 border-gray-800 lg:flex-row">
                 <div class="w-full mb-6 lg:w-2/5 lg:pr-20 lg:mb-0">
-                    <img loading="lazy" src="{{ asset('images/footer.png') }}" alt="{{ config('app.name') }}" height="50px" class="block mb-5" />
+                    <img loading="lazy" src="{{ asset('images/Icon.png') }}" alt="{{ config('app.name') }}" height="50px" class="block mb-5" />
 
                     <p class="text-gray-100 lg:leading-loose">
-                        The TaskflowHR portal for problem solving, knowledge sharing and community building.
+                        The CrossJobs portal for problem solving, knowledge sharing and community building.
                     </p>
                 </div>
 
                 <div class="lg:w-full lg:flex lg:justify-between">
                     <div class="grow mb-6 lg:mb-0">
                         <p class="text-lg mb-4 lg:mb-6">
-                            TaskflowHR
+                            CrossJobs
                         </p>
 
                         <div class="flex flex-wrap lg:flex-col lg:flex-no-wrap">
@@ -38,10 +38,14 @@
                         </p>
 
                         <div class="flex flex-wrap lg:flex-col lg:flex-no-wrap">
-                            <a href="https://twitter.com/taskflowhr" class="w-1/2 text-gray-400 mb-4 hover:text-gray-200 lg:mb-6">
+                            <a href="https://linkedin.com/company/crossjobss" class="w-1/2 text-gray-400 mb-4 hover:text-gray-200 lg:mb-6">
+                                <x-icon-twitter class="text-white w-4 h-4 inline mr-3.5"/>
+                                Linkedin
+                            </a>
+                            {{--<a href="https://twitter.com/taskflowhr" class="w-1/2 text-gray-400 mb-4 hover:text-gray-200 lg:mb-6">
                                 <x-icon-twitter class="text-white w-4 h-4 inline mr-3.5"/>
                                 Twitter
-                            </a>
+                            </a>--}}
                         </div>
                     </div>
 
@@ -50,7 +54,7 @@
 
             <div class="text-gray-100 flex flex-col lg:flex-row">
                 <span class="mb-5 lg:mb-0 lg:mr-5">
-                    &copy; {{ date('Y') }} TaskflowHR - All rights reserved.
+                    &copy; {{ date('Y') }} CrossJobs - All rights reserved.
                 </span>
 
                 <div class="flex flex-wrap lg:block">

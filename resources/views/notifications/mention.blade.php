@@ -17,7 +17,7 @@
 
     <td class="px-6 py-4 whitespace-nowrap border-b border-gray-200 text-sm leading-5 text-gray-600 text-right">
         <div class="flex justify-end">
-            <button wire:click="markAsRead('{{ $notification->id }}')" class="text-blue-600">
+            <button wire:click="markAsRead('{{ $notification->id }}')" class="text-purple-600">
                 <x-heroicon-s-check class="w-5 h-5"/>
             </button>
         </div>

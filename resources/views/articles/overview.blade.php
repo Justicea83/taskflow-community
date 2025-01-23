@@ -10,12 +10,12 @@
         </div>
     </div>
 
-    <div class="bg-blue-100">
+    <div class="bg-purple-100">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-20 lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 md:text-3xl">
                 <span class="block">Got some knowledge to share?</span>
                 <span class="block">
-                    Share your article with <a href="https://twitter.com/taskflowhr" class="text-blue-600 hover:text-blue-700 hover:underline">our Twitter followers?</a>.
+                    Share your article with <a href="https://linkedin.com/company/crossjobss" class="text-purple-600 hover:text-purple-700 hover:underline">our Linkedin followers?</a>.
                 </span>
             </h2>
             <div class="mt-8 flex lg:mt-0 lg:shrink-0">
@@ -166,7 +166,7 @@
                                     </div>
 
                                     <div>
-                                        <span class="flex items-center gap-x-3 text-blue-600">
+                                        <span class="flex items-center gap-x-3 text-purple-600">
                                             <span class="text-xl font-medium">
                                                 {{ $loop->iteration }}
                                             </span>

@@ -5,7 +5,7 @@
                 <div class="block lg:flex lg:items-center lg:shrink-0">
                     <div class="flex justify-between items-center p-4 lg:p-0">
                         <a href="{{ route('home') }}" class="mr-4">
-                            <img loading="lazy" class="h-6 w-auto lg:h-8" src="{{ asset('images/logo.svg') }}" width="330" height="78" alt="{{ config('app.name') }}" />
+                            <img loading="lazy" class="h-6 w-auto lg:h-8" src="{{ asset('images/logo.png') }}" width="330" height="78" alt="{{ config('app.name') }}" />
                         </a>
 
                         <div class="flex lg:hidden">
@@ -43,7 +43,7 @@
 
                 <div class="w-full block gap-x-4 lg:flex lg:items-center lg:justify-end">
                     <div class="flex items-center">
-                        <button @click="showSearch($event)" @keyup.window.slash="showSearch($event)" class="hover:text-blue-600">
+                        <button @click="showSearch($event)" @keyup.window.slash="showSearch($event)" class="hover:text-purple-600">
                             <x-heroicon-o-magnifying-glass class="h-5 w-5 hidden lg:block" />
                         </button>
                         @include('_partials._search')
@@ -52,7 +52,7 @@
                     <ul class="block lg:flex lg:items-center gap-x-8" x-cloak :class="{ 'block': nav, 'hidden': !nav }">
                         @if (Auth::guest())
                             <li class="w-full rounded text-center lg:hover:bg-gray-100">
-                                <a href="https://hr.taskflowhr.com/web/index.php/auth/register" class="inline-block w-full  p-2.5">
+                                <a href="https://app.crossjobs.co/recruiter/sign-up" class="inline-block w-full  p-2.5">
                                     Register
                                 </a>
                             </li>
@@ -76,7 +76,7 @@
                                 <div class="flex items-center justify-center">
                                     <a href="{{ route('notifications') }}" class="hidden shrink-0 rounded-full lg:block">
                                         <span class="block relative">
-                                            <x-heroicon-o-bell  class="h-5 w-5 hover:fill-current hover:text-blue-600"/>
+                                            <x-heroicon-o-bell  class="h-5 w-5 hover:fill-current hover:text-purple-600"/>
 
                                             <livewire:notification-indicator/>
                                         </span>

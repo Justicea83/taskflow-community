@@ -13,13 +13,13 @@
             <div class="flex flex-col items-center px-4 lg:flex-row lg:px-0">
                 <div class="w-full mb-8 lg:w-1/2 lg:mb-0 lg:mr-16">
                     <h1 class="text-3xl font-bold text-gray-900 leading-tight mb-3 lg:text-6xl">
-                        TaskflowHR Community Portal
+                        CrossJobs Community Portal
                     </h1>
 
                     <div class="mb-5">
                         <p class="text-gray-800 text-lg leading-8 font-medium">
-                            The TaskflowHR portal for problem solving, knowledge sharing and community building.
-                            Join <x-accent-text>{{ $totalUsers }}</x-accent-text> other Taskflowers.
+                            The CrossJobs portal for problem solving, knowledge sharing and community building.
+                            Join <x-accent-text>{{ $totalUsers }}</x-accent-text> other CrossJobers.
                         </p>
                     </div>
 
@@ -77,7 +77,7 @@
 
     <!-- Search -->
     <section class="mt-12 lg:mt-24">
-        <div class="bg-[#5B45E5] text-white -skew-y-1">
+        <div class="bg-purple-600 text-white -skew-y-1">
             <div class="container mx-auto skew-y-1">
                 <div class="flex flex-col items-center py-10 text-center lg:py-20">
                     <div class="w-full px-4 lg:w-1/2 lg:px-0">
@@ -154,7 +154,7 @@
     <!-- Laravel.io in numbers -->
     <section class="mt-12 container mx-auto px-4 lg:mt-40 lg:px-16">
         <h2 class="text-4xl leading-tight font-bold text-center text-gray-900 mb-6 lg:mb-12">
-            TaskflowHR Community in numbers
+            CrossJobs Community in numbers
         </h2>
 
         <div class="flex flex-col lg:mb-10 lg:flex-row lg:gap-x-8">

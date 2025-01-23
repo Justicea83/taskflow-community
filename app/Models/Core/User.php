@@ -5,13 +5,14 @@ namespace App\Models\Core;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
- * @property Employee $employee
- * @property mixed $user_password
- * @property mixed $user_name
+ * @property mixed $password
+ * @property mixed $email
+ * @property mixed $first_name
+ * @property mixed $last_name
  */
 class User extends CoreModel
 {
-    protected $table = 'ohrm_user';
+    protected $table = 'core_user';
 
     public function employee(): HasOne
     {

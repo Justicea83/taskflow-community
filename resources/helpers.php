@@ -1,26 +1,26 @@
 <?php
 
-if (! function_exists('active')) {
+if (!function_exists('active')) {
     /**
      * Sets the menu item class for an active route.
      */
     function active(mixed $routes, bool $condition = true): string
     {
-        return call_user_func_array([app('router'), 'is'], (array) $routes) && $condition ? 'active' : '';
+        return call_user_func_array([app('router'), 'is'], (array)$routes) && $condition ? 'active' : '';
     }
 }
 
-if (! function_exists('is_active')) {
+if (!function_exists('is_active')) {
     /**
      * Determines if the given routes are active.
      */
     function is_active(mixed $routes): bool
     {
-        return (bool) call_user_func_array([app('router'), 'is'], (array) $routes);
+        return (bool)call_user_func_array([app('router'), 'is'], (array)$routes);
     }
 }
 
-if (! function_exists('md_to_html')) {
+if (!function_exists('md_to_html')) {
     /**
      * Convert Markdown to HTML.
      */
@@ -30,7 +30,7 @@ if (! function_exists('md_to_html')) {
     }
 }
 
-if (! function_exists('route_to_reply_able')) {
+if (!function_exists('route_to_reply_able')) {
     /**
      * Returns the route for the replyAble.
      */
@@ -42,7 +42,7 @@ if (! function_exists('route_to_reply_able')) {
     }
 }
 
-if (! function_exists('replace_links')) {
+if (!function_exists('replace_links')) {
     /**
      * Convert Standalone Urls to HTML.
      */
@@ -54,7 +54,7 @@ if (! function_exists('replace_links')) {
     }
 }
 
-if (! function_exists('canonical')) {
+if (!function_exists('canonical')) {
     /**
      * Generate a canonical URL to the given route and allowed list of query params.
      */
@@ -66,5 +66,20 @@ if (! function_exists('canonical')) {
         ksort($params);
 
         return route($route, $params);
+    }
+}
+
+if (!function_exists('checkDjangoPassword')) {
+    function checkDjangoPassword($password, $hashedPassword): bool
+    {
+        if (str_starts_with($hashedPassword, 'pbkdf2_sha256')) {
+            list($algorithm, $iterations, $salt, $hash) = explode('$', $hashedPassword);
+            $calculatedHash = hash_pbkdf2('sha256', $password, $salt, (int)$iterations, 32, true);
+            $calculatedHash = base64_encode($calculatedHash);
+
+            return hash_equals($calculatedHash, $hash);
+        }
+
+        return false;
     }
 }

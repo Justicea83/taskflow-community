@@ -45,9 +45,14 @@ module.exports = {
                 discord: '#7289da',
                 facebook: '#4267b2',
                 linkedin: '#2977c9',
+                'gradient-start': '#F1E6FD',
+                'gradient-end': '#F7F5FA',
             },
             fontFamily: {
                 sans: ['Inter', ...defaultTheme.fontFamily.sans],
+            },
+            backgroundImage: {
+                'radial-gradient': 'radial-gradient(circle, var(--tw-gradient-stops))',
             },
             minWidth: {
                 8: '2rem',

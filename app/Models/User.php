@@ -22,6 +22,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @property \Illuminate\Support\Carbon|mixed $email_verified_at
  * @property mixed|string $remember_token
  * @property mixed|string $bio
+ * @property mixed|null $github_username
+ * @property mixed|null $github_id
  */
 final class User extends Authenticatable implements MustVerifyEmail
 {

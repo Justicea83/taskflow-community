@@ -7,11 +7,11 @@
 
             <div class="mt-4 sm:mt-0 sm:ml-10">
                 <nav class="-mb-px flex space-x-8">
-                    <a href="{{ route('admin') }}" class="{{ is_active('admin') ? 'border-blue-600 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' }} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm">
+                    <a href="{{ route('admin') }}" class="{{ is_active('admin') ? 'border-purple-600 text-purple-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' }} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm">
                         Articles
                     </a>
 
-                    <a href="{{ route('admin.users') }}" class="{{ is_active('admin.users') ? 'border-blue-600 text-blue-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' }} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm" aria-current="page">
+                    <a href="{{ route('admin.users') }}" class="{{ is_active('admin.users') ? 'border-purple-600 text-purple-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300' }} whitespace-nowrap pb-4 px-1 border-b-2 font-medium text-sm" aria-current="page">
                         Users
                     </a>
                 </nav>
@@ -34,7 +34,7 @@
                             id="adminSearch"
                             placeholder="{{ $placeholder }}"
                             value="{{ $search ?? null }}"
-                            class="focus:ring-blue-600 focus:border-blue-600 w-full rounded-md pl-10 block text-sm border-gray-300"
+                            class="focus:ring-purple-600 focus:border-purple-600 w-full rounded-md pl-10 block text-sm border-gray-300"
                         />
                     </div>
                 </div>

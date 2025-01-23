@@ -12,7 +12,7 @@
                 <button 
                     type="button" 
                     @click="mode = 'write'" 
-                    :class="{ 'text-blue-600 border-blue-600 border-b-2': mode === 'write' }"
+                    :class="{ 'text-purple-600 border-purple-600 border-b-2': mode === 'write' }"
                 >
                     Write
                 </button>
@@ -23,7 +23,7 @@
                     type="button" 
                     @click="mode = 'preview'" 
                     wire:click="preview" 
-                    :class="{ 'text-blue-600 border-blue-600 border-b-2': mode === 'preview' }"
+                    :class="{ 'text-purple-600 border-purple-600 border-b-2': mode === 'preview' }"
                 >
                     Preview
                 </button>
@@ -34,7 +34,7 @@
             <div class="flex flex-col relative">
                 <div x-text="body + '\n'" class="invisible whitespace-pre-line border-none p-5 min-h-[5rem]"></div>
                 <textarea 
-                    class="w-full h-full absolute left-0 top-0 right-0 bottom-0 overflow-y-hidden resize-none border-none p-5 focus:border focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    class="w-full h-full absolute left-0 top-0 right-0 bottom-0 overflow-y-hidden resize-none border-none p-5 focus:border focus:border-purple-300 focus:ring focus:ring-purple-200 focus:ring-opacity-50"
                     id="body"
                     name="body"
                     placeholder="{{ $placeholder }}"
@@ -66,7 +66,7 @@
                             <li
                                 @click.prevent="selectUser('{{ $user['username'] }}')"
                                 role="option"
-                                class="flex items-center gap-x-2 p-2 cursor-pointer hover:bg-blue-100"
+                                class="flex items-center gap-x-2 p-2 cursor-pointer hover:bg-purple-100"
                                 data-username="{{ $user['username'] }}"
                                 aria-selected="{{ $loop->first ? 'true' : 'false' }}"
                             >
@@ -103,7 +103,7 @@
         </div>
 
         <div x-show="mode === 'preview'" x-cloak>
-            <div class="prose prose-blue max-w-none p-5 break-words" id="editor-preview">
+            <div class="prose prose-purple max-w-none p-5 break-words" id="editor-preview">
                 {!! $this->preview !!}
             </div>
         </div>
