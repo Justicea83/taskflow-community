@@ -25,7 +25,7 @@
 
                     <div>
                         @if (Auth::guest())
-                            <x-buttons.primary-cta href="https://hr.taskflowhr.com/web/index.php/auth/register" class="w-full mb-3 lg:w-auto lg:mr-2">
+                            <x-buttons.primary-cta href="https://app.crossjobs.co/recruiter/sign-up" class="w-full mb-3 lg:w-auto lg:mr-2">
                                 Join the community
                             </x-buttons.primary-cta>
 
