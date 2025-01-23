@@ -58,10 +58,10 @@
                 </span>
 
                 <div class="flex flex-wrap lg:block">
-                    <a href="{{ route('terms') }}" class="w-1/2 mb-4 hover:text-gray-200 lg:w-full lg:mb-0 lg:mr-8">
+                    <a href="https://crossjobs.co/terms-conditions" class="w-1/2 mb-4 hover:text-gray-200 lg:w-full lg:mb-0 lg:mr-8">
                         Terms of service
                     </a>
-                    <a href="{{ route('privacy') }}" class="w-1/2 mb-4 hover:text-gray-200 lg:w-full lg:mb-0 lg:mr-8">
+                    <a href="https://crossjobs.co/privacy-policy" class="w-1/2 mb-4 hover:text-gray-200 lg:w-full lg:mb-0 lg:mr-8">
                         Privacy policy
                     </a>
                     {{--<a href="https://github.com/sponsors/laravelio" class="w-1/2 hover:text-gray-200 lg:w-full lg:mb-0">

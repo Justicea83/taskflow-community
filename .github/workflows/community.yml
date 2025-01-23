@@ -11,7 +11,6 @@ jobs:
     env:
       IMAGE_TAG: latest
       IMAGE_NAME: crossjobs-community
-      REPOSITORY: taskflow-community
       GH_USERNAME: justicea83
       APP_ROOT: ghcr.io/justicea83
 
@@ -26,9 +25,6 @@ jobs:
             echo "CURRENT_ENV=prod" >> $GITHUB_ENV
 
             echo "VM_HOST=${{ secrets.VM_HOST_PROD }}" >> $GITHUB_ENV
-            echo "DB_PASSWORD=${{ secrets.DB_PASSWORD_PROD }}" >> $GITHUB_ENV
-            echo "DB_DATABASE=${{ secrets.DB_DATABASE_PROD }}" >> $GITHUB_ENV
-            echo "DB_USERNAME=${{ secrets.DB_USERNAME_PROD }}" >> $GITHUB_ENV
           fi
 
       - name: Create .env file

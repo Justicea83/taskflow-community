@@ -13,4 +13,5 @@
 /.idea
 /.vscode
 .env
+.env.prod
 .phpunit.result.cache
