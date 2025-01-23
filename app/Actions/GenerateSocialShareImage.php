@@ -23,9 +23,7 @@ final class GenerateSocialShareImage
 
     const CACHE_LIFETIME = 43200;
 
-    public function __construct(private ImageManager $image)
-    {
-    }
+    public function __construct(private ImageManager $image) {}
 
     public function __invoke(Article $article): mixed
     {

@@ -14,6 +14,7 @@ final class Tag extends Model
     use HasSlug;
 
     protected $fillable = ['name', 'slug'];
+
     /**
      * {@inheritdoc}
      */

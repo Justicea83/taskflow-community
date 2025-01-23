@@ -4,14 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\RedirectIfAuthenticated;
-use App\Models\Core\Employee;
 use App\Models\Core\User;
 use App\Providers\RouteServiceProvider;
 use App\Utils\Whiltelist;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
@@ -32,8 +30,6 @@ class LoginController extends Controller
 
     /**
      * Where to redirect users after login.
-     *
-     * @var string
      */
     protected string $redirectTo = RouteServiceProvider::HOME;
 
@@ -49,8 +45,6 @@ class LoginController extends Controller
 
     /**
      * Get the login username to be used by the controller.
-     *
-     * @return string
      */
     public function username(): string
     {
@@ -91,8 +85,8 @@ class LoginController extends Controller
         $coreUser = User::query()->where('email', $request->get('username'))->first();
 
         if ($coreUser && checkDjangoPassword($request->get('password'), $coreUser->password)) {
-            if (!\App\Models\User::query()->where('username', $coreUser->email)->exists()) {
-                $communityUser = new \App\Models\User();
+            if (! \App\Models\User::query()->where('username', $coreUser->email)->exists()) {
+                $communityUser = new \App\Models\User;
                 $communityUser->email = $coreUser->email;
                 $communityUser->username = $coreUser->email;
                 $communityUser->type = $this->getUserRole($coreUser->email);

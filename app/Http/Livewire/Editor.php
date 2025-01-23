@@ -31,7 +31,7 @@ class Editor extends Component
 
     public $participants = [];
 
-    public function mount(EloquentCollection $participants = null)
+    public function mount(?EloquentCollection $participants = null)
     {
         $this->participants = $participants ? $participants->toArray() : [];
     }

@@ -10,8 +10,7 @@ final class GithubUser implements Arrayable
 {
     public function __construct(
         private array $attributes
-    ) {
-    }
+    ) {}
 
     public function isTooYoung(): bool
     {
