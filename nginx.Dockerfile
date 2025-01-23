@@ -93,7 +93,7 @@ COPY ./docker/nginx/ssl /etc/nginx/ssl
 COPY ./docker/nginx/sites/ /etc/nginx/sites-available
 
 # Set permissions for storage directory and all its subdirectories
-RUN mkdir -p /var/www/storage \
+RUN mkdir -p /var/www/storage/logs \
     && chown -R www-data:www-data /var/www/storage \
     && chmod -R 775 /var/www/storage
 
