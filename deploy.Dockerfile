@@ -149,7 +149,7 @@ RUN composer install --no-dev --optimize-autoloader
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN ln -s /usr/local/bin/docker-entrypoint.sh /
 
-RUN mkdir -p /var/www/storage \
+RUN mkdir -p /var/www/storage/logs \
     && chown -R www-data:www-data /var/www/storage \
     && chmod -R 775 /var/www/storage
 
