@@ -137,7 +137,7 @@ WORKDIR /var/www
 
 COPY --chown=www-data:www-data ./docker-entrypoint.sh /usr/local/bin/
 
-COPY --chown=www-data:www-data . .
+COPY . .
 
 #####################################
 # Change FPM listen port to 9001
